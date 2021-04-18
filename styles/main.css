@@ -33,7 +33,9 @@ html{
     --hover: #dfb81c;
     
 }
-
+/* ------------------------------- */
+/* Global Styles  */
+/* ------------------------------- */
 body{
     height: 100vh;
     margin: 0 auto;
@@ -45,6 +47,41 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 3rem 0 1.38rem;
+    font-family: var(--header-ft);
+    font-weight: var(--fw-600);
+}
+
+h1{
+    margin-top: 0;
+    font-size: 3.052rem;
+}
+
+h2 {
+    font-size: 2.441rem;
+}
+
+h3{
+    font-size: 1.953rem;
+}
+
+h4{
+    font-size: 1.563rem;
+}
+
+h5{
+    font-size: 1.25rem;
+}
+
+small, .txt-small{
+    font-size: 0.8rem;
 }
 
 /* ------------------------------- */
@@ -134,9 +171,10 @@ body{
     font-size: 1.5rem;
 }
 
-.action-btn-big:hover{
-    color:#b9bda6;
-
+.action-btn-big:hover, .action-btn:hover{
+    color:white;
+    transform: scale(1.1, 1.1) 4s ease-in;
+    -webkit-transform: scale(1.1, 1.1); 
 }
 
 /* menu from Blur Admin*/
