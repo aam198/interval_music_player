@@ -175,6 +175,7 @@ small, .txt-small{
     color:white;
     transform: scale(1.1, 1.1) 4s ease-in;
     -webkit-transform: scale(1.1, 1.1); 
+    box-shadow: 0 32px 32px -8px rgba(0,0,0,.4);
 }
 
 /* menu from Blur Admin*/
