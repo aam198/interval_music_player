@@ -24,7 +24,8 @@ html{
     --sm-text: 0.8rem;
 
     --text-clr: #fef9e6;
-    --bk-clr: rgba(0,0,0,0.45);
+    --bk-clr: rgba(0,0,0,0.55);
+    --info-clr: rgba(0,0,0,0.35);
     --btn-clr: #c4c7b4;
 
     --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -56,6 +57,7 @@ h1, h2, h3, h4, h5 {
     margin: 3rem 0 1.38rem;
     font-family: var(--header-ft);
     font-weight: var(--fw-600);
+    color: var(--text-clr);
 }
 
 h1{
@@ -91,7 +93,7 @@ small, .txt-small{
     display: flex;
     padding: 1.5rem 2rem;
     position: relative;
-    margin: 6rem 0;
+    margin: 8rem 0;
     background-color: var(--bk-clr);
     border-radius: 1rem;
     box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.7);
@@ -184,15 +186,20 @@ small, .txt-small{
 
 
 .music-info{
-    background-color: rgba(255,255,255,0.5);
+    background-color: var(--info-clr);
+    color: var(--text-clr);
     border-radius: 15px 15px 0 0;
     position: absolute;
     top: 0;
     left: 20px;
-    width: calc(100% - 40px);
-    /* opacity: 0;  */
-    transform: translateY(0%);
     padding: 10px 10px 10px 150px;
+    width: calc(100% - 40px);
+    opacity: 0;  
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+.music-info h4{
+    margin: 0;
 }
 
 .music-container.play .music-info{
@@ -200,7 +207,26 @@ small, .txt-small{
     transform: translateY(-100%);
 }
 
+/* ------------------------------- */
+/* Progress Area  */
+/* ------------------------------- */
 
+.progress-container{
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px; 
+    width: 100%;
+}
+
+.progress {
+    background-color: var(--hover);
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
 
 /* menu from Blur Admin*/
 .ion-navicon::before {
