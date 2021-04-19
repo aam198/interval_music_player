@@ -27,6 +27,8 @@ html{
 
     --text-clr: #fef9e6;
     --bk-clr: rgba(0,0,0,0.45);
+    --btn-clr: #c4c7b4;
+
     --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     --img-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 
@@ -158,7 +160,7 @@ small, .txt-small{
 }
 
 .action-btn{
-    color: var(--text-clr);
+    color: var(--btn-clr);
     background-color: var(--bk-clr);
     border: 0;
     font-size: 1.2rem;
@@ -167,12 +169,12 @@ small, .txt-small{
 }
 
 .action-btn-big{
-    color: rgba(185, 189, 166, 0.7);
+    color: var(--btn-clr);
     font-size: 1.5rem;
 }
 
 .action-btn-big:hover, .action-btn:hover{
-    color:white;
+    color: var(--text-clr);
     transform: scale(1.1, 1.1) 4s ease-in;
     -webkit-transform: scale(1.1, 1.1); 
     box-shadow: 0 32px 32px -8px rgba(0,0,0,.4);
