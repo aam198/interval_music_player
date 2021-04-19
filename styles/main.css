@@ -206,6 +206,11 @@ small, .txt-small{
     font-size:1.2rem;
 }
 
+.music-info h5{
+    font-size: 1rem;
+    margin-top: 2px;
+}
+
 .music-container.play .music-info{
     opacity: 1;
     transform: translateY(-100%);

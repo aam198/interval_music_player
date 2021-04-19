@@ -53,8 +53,8 @@ audio.onloadeddata = function () {
     progress.max = audio.duration
     var ds = parseInt(audio.duration % 60)
     var dm = parseInt((audio.duration / 60) % 60)
-    duration2.innerHTML = dm + ':' + ds
-    duration.innerHTML = dm + ':' + ds
+    duration2.innerHTML =  dm + ':' + ds
+    duration.innerHTML =("0"+ dm) + ':' + ds
 }
 
 audio.ontimeupdate = function () { 
@@ -62,9 +62,11 @@ audio.ontimeupdate = function () {
 }
 
 audio.addEventListener('timeupdate', function () {
-    var cs = parseInt(audio.currentTime % 60)
-    var cm = parseInt((audio.currentTime / 60) % 60)
-    currentTime.innerHTML = cm + ':' + cs
+    const minute = Math.floor(audio.currentTime / 60);
+    const second = Math.floor(audio.currentTime % 60);
+    
+    currentTime.innerHTML =
+      ("0" + minute).substr(-2) + ":" + ("0" + second).substr(-2);
 }, false)
 
 
@@ -97,7 +99,7 @@ function updateProgress(e){
     const progressPercent = (currentTime / duration)* 100;
 
     progress.style.width = `${progressPercent}%`;
-    slider.style.width = `${progressPercent}%`;
+
 }
 
 function setProgress(e) {
@@ -108,9 +110,6 @@ function setProgress(e) {
     audio.currentTime = (clickX / width)* duration;
 }
 
-function sliderChange() {
-    position = elements.slider.value;
-  }
 
 
 
